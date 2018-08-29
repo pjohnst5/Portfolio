@@ -1,0 +1,101 @@
+body {
+  background-image: url(/images/space.jpg);
+  height: 100%;
+  background-size: cover;
+  text-align: center;
+  color: blue;
+}
+
+
+
+h1.big {
+  color: pink;
+  font-family: 'Kavivanar', cursive;
+}
+
+.big {
+  color: grey;
+}
+
+h1 {
+
+  color: red;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: white;
+  border-top-style:  solid;
+  border-bottom-style: dotted;
+  border-top-color: green;
+  border-bottom-color: #FFA500;
+}
+
+#projectList{
+  color: white;
+}
+
+#experienceList {
+  color: white;
+}
+
+#contactList {
+  color: white;
+}
+
+nav ul {
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height:50px;
+  overflow: hidden;
+  background-color: #333;
+  font-family: "Courier";
+}
+
+
+nav li {
+float:left;
+}
+
+nav li a {
+display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active){
+background-color: #111;
+}
+
+nav .active {
+  background-color: #4CAF50;
+}
+
+
+a {
+  color: orange;
+}
+
+section {
+ display: flex;
+}
+
+aside {
+flex: 1
+}
+
+article {
+flex: 4
+
+}
