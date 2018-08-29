@@ -1,5 +1,5 @@
 body {
-  background-image: url(/images/space.jpg);
+  background-image: url(./images/space.jpg);
   height: 100%;
   background-size: cover;
   text-align: center;
