@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../portfolio.css">
+<title>Datalog Parser</title>
+</head>
+<body>
+
+  <nav>
+  <ul>
+    <li><a href="../projects.html">Back to Projects</a></li>
+  </ul>
+  </nav>
+
+<h1>Datalog Parser</h1>
+<hr>
+
+<div class="projectTable">
+  <div class="videoDisplay">
+    <video width="1000" height="500" controls>
+      <source src="../videos/datalogParser.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="videoAbout">
+    <br>
+    <h2>About</h2>
+    <p>A datalog parser useful for storing information and joining existing tables to create new ones. I used graph theory to convert the rules list into a graph and then foung the strongly connected components of the rules. This allowed for optimization when running the rules because I would only run the rules that were strongly connected to on another. Able to process more than 400,000 rows of information in less than a minute.</p>
+    <p>I wrote a bash script to run test cases using multiple test files</p>
+    <h2>Languages Used</h2>
+    <ul>
+      <li>C++</li>
+      <li>Bash</li>
+    </ul>
+    <h2>Algorithms Used</h2>
+    <ul>
+      <li>Depth First Search</li>
+      <li>Topological Ordering</li>
+    </ul>
+    <h2>Design Patterns</h2>
+      <ul>
+        <li>Object Oriented Design</li>
+  </div>
+  <div class="videoSourceCode">
+    <p>Source Code available on <a href="https://github.com/pjohnst5/optimizationpure">Github</a></p>
+  </div>
+</div>
+
+
+</body>
+</html>

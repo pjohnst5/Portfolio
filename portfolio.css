@@ -74,6 +74,10 @@ nav li ul li a:hover + .hidden, .hidden:hover {
     color: blue;
 }
 
+.infoBar a {
+  text-decoration: none;
+}
+
 
 /* Home Page */
 section {
