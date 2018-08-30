@@ -76,6 +76,7 @@ nav li ul li a:hover + .hidden, .hidden:hover {
 
 .infoBar a {
   text-decoration: none;
+  color: black;
 }
 
 
