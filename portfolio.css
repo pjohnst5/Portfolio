@@ -1,61 +1,20 @@
 body {
-  background-image: url(./images/space.jpg);
+  /* background-image: url(./images/space.jpg); */
   height: 100%;
   background-size: cover;
   text-align: center;
-  color: blue;
-}
-
-
-
-h1.big {
-  color: pink;
-  font-family: 'Kavivanar', cursive;
-}
-
-.big {
-  color: grey;
 }
 
 h1 {
-
-  color: red;
+  font-size: 30px;
 }
 
-h2 {
-  color: white;
-}
-
-h3 {
-  color: white;
-}
-
-p {
-  text-align: center;
-  color: white;
-  border-top-style:  solid;
-  border-bottom-style: dotted;
-  border-top-color: green;
-  border-bottom-color: #FFA500;
-}
-
-#projectList{
-  color: white;
-}
-
-#experienceList {
-  color: white;
-}
-
-#contactList {
-  color: white;
-}
-
+/* Navigation Bar */
 nav ul {
 list-style-type: none;
   margin: 0;
   padding: 0;
-  height:50px;
+  height:100%;
   overflow: hidden;
   background-color: #333;
   font-family: "Courier";
@@ -82,11 +41,7 @@ nav .active {
   background-color: #4CAF50;
 }
 
-
-a {
-  color: orange;
-}
-
+/* Home Page */
 section {
  display: flex;
 }
@@ -97,5 +52,80 @@ flex: 1
 
 article {
 flex: 4
+}
 
+.article {
+  padding: 10px;
+}
+
+
+/* Project Stuff */
+.projectContainer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "cell11 cell12 cell13"
+        "cell21 cell22 cell23"
+        "cell31 cell32 cell33";
+    grid-gap: 20px;
+    padding-left: 5px;
+  }
+
+
+.projectCell {
+  border-color: blue;
+  border: solid;
+  width: 390px;
+  height: 300px;
+  background-color: rgba(216, 245, 255, 0.5);
+  padding: 0;
+  position: relative;
+}
+
+.infoBar {
+  width: 390px;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.projectCellDisplay {
+  height: 80%;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+}
+
+.cell11 {
+  grid-area: cell11;
+}
+.cell12 {
+  grid-area: cell12;
+}
+.cell13 {
+  grid-area: cell13;
+}
+.cell21 {
+  grid-area: cell21;
+}
+.cell22 {
+  grid-area: cell22;
+}
+.cell23 {
+  grid-area: cell23;
+}
+.cell31 {
+  grid-area: cell31;
+}
+.cell32 {
+  grid-area: cell32;
+}
+.cell33 {
+  grid-area: cell33;
 }
