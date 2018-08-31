@@ -201,3 +201,7 @@ flex: 4
   margin: auto;
   text-align: left;
 }
+
+.videoSourceCode p {
+  font-size: 20px;
+}
