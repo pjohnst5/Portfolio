@@ -85,6 +85,18 @@ section {
  display: flex;
 }
 
+#projectsSection {
+  display: flex;
+}
+
+#projectsAside {
+  flex:0;
+}
+
+#projectsArticle {
+  flex:4;
+}
+
 aside {
 flex: 1
 }
