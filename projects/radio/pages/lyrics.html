@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<title>Rock on!</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="logo">
+			<a href="../../../projects.html"<button type="button" name="button">Back to Projects</button></a>
+			<h1>X97, Radio from Heaven</h1>
+		</div>
+		<div class="header">
+
+			<ul id="menu">
+				<li><a href="../index.html">Home</a></li>
+				<li><a class="active" href="#">Lyrics</a></li>
+				<li>
+					<a href="#">About <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+					<ul class="hidden">
+              			<li><a href="./meetdjs.html">Meet the DJ's</a></li>
+              			<li><a href="./missionstatement.html">Our Purpose</a></li>
+            		</ul>
+				</li>
+
+				<li><a href="./concerts.html">Concerts</a></li>
+			</ul>
+
+		</div>
+		<div class="main">
+			<h2>Need some lyrics?</h2>
+			<h2>Which song?</h2>
+
+			<form>
+			  <label><strong>Name of song</strong></label>
+			  <input id="songInput" type="text"></input><br/>
+			  <label><strong>Artist</strong></label>
+			  <input id="artistInput" type="text"></input><br/>
+			  <input id="lyricsSubmit" type="submit" value="Submit"></input>
+			</form>
+
+			<div id="lyricsResultsHome">
+
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Created by Paul Johnston<br></p>
+			<p>Source code available on <a href="https://github.com/pjohnst5/creative2.git" target="_blank">GitHub</a></p>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script text="type/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
