@@ -115,6 +115,7 @@ Container three
     margin:0;
     padding:0;
     position: relative;
+    padding-left: 6%;
 }
 
 .header li {
