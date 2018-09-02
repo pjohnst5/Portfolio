@@ -7,6 +7,11 @@ body  {
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 0em;
+    background-position: fill;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -57,6 +62,10 @@ hr {
         "footer footer";
     grid-gap: 20px;
     background-color: rgba(188, 204, 201, 0.4);
+    height: 100vh;
+
+    overflow:scroll;
+  	overflow-x: hidden;
 }
 
 /*Container two */
@@ -105,7 +114,7 @@ Container three
     list-style-type:none;
     margin:0;
     padding:0;
-    position: absolute;
+    position: relative;
 }
 
 .header li {
@@ -116,7 +125,7 @@ Container three
 
 .header li a {
     display:block;
-    min-width:140px;
+    min-width:120px;
     height: 50px;
     text-align: center;
     font-size: 20px;
