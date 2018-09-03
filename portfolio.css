@@ -217,3 +217,22 @@ flex: 4
 .videoSourceCode p {
   font-size: 20px;
 }
+
+.experience {
+  padding-top: 10px;
+}
+
+.experience ul {
+  list-style-position: outside;
+}
+
+.bulletList {
+  width: 70%;
+  margin: auto;
+  text-align: left;
+}
+
+.experience a:visited {
+  text-decoration: none;
+  color: blue;
+}
