@@ -232,6 +232,11 @@ flex: 4
   text-align: left;
 }
 
+.bulletList p {
+  padding: none;
+  margin: 0px;
+}
+
 .experience a:visited {
   text-decoration: none;
   color: blue;
