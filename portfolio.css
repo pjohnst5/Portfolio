@@ -230,7 +230,7 @@ flex: 4
 .bulletList {
   width: 70%;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .bulletList p {
@@ -261,7 +261,7 @@ flex: 4
 }
 
 .list-horizontal {
-  
+  margin-left: 6%;
 }
 .list-horizontal li {
 	display:inline-block;
