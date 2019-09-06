@@ -1,0 +1,41 @@
+hr {
+	width: 80%;
+}
+
+/* Big wrapper container */
+.container {
+	display: grid;
+}
+
+/* Projects button */
+.styledButton {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* Courses left and right */
+.left_right_container {
+	width: 70%;
+	margin: auto;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  margin: auto;
+}
+
+.right {
+  float: left;
+  width: 50%;
+  margin: auto;
+  text-align: right;
+}

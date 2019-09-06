@@ -7,7 +7,8 @@ $(document).ready(function() { //$ which part of the document do you want to wor
 	e.preventDefault();
 	var songName = $("#songInput").val();
 	var artist = $("#artistInput").val();
-    var myurl= "https://api.lyrics.ovh/v1/" + artist + "/" + songName;
+  var myurl= "https://api.lyrics.ovh/v1/" + artist + "/" + songName;
+
 		$.ajax({
 		    url : myurl,
 		    dataType : "json",
@@ -19,7 +20,8 @@ $(document).ready(function() { //$ which part of the document do you want to wor
 			results += json.lyrics.replace(/\n/g, "<br />");
 			$("#lyricsResultsHome").html(results);
 		    }
-		});    
+		});
+
     }); //end of weather submit click handler
 
 });

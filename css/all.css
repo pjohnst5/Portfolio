@@ -1,0 +1,68 @@
+body {
+  height: 100%;
+  background-size: cover;
+  text-align: center;
+}
+hr {
+	width: 80%;
+}
+
+.container a:visited {
+  color: blue
+}
+
+/* Nav Bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height:100%;
+  overflow: hidden;
+  background-color: #333;
+}
+nav li {
+  display:inline-block;
+  float:left;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+nav li a:hover:not(.active){
+background-color: #111;
+}
+nav a.active {
+  background-color: #4CAF50;
+}
+
+/* Bulleted lists */
+.bulletList {
+  width: 70%;
+  margin: auto;
+  text-align: left;
+}
+.bulletList p {
+  padding: none;
+  margin: 0px;
+}
+
+/* Horizontal lists */
+.list-horizontal {
+  margin-left: 6%;
+}
+.list-horizontal li {
+	display:inline-block;
+}
+.list-horizontal li:before {
+	content: '\00a0\2022\00a0\00a0';
+	color:#999;
+	color:rgba(0,0,0,0.5);
+	font-size:11px;
+}
+.list-horizontal li:first-child:before {
+	content: '';
+}

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="portfolio.css">
+	<link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="./css/home_mobile.css">
+	<link rel='stylesheet' media='screen and (min-width: 900px)' href='./css/home_big.css' />
 <title>Paul Johnston's Portfolio</title>
 </head>
 <body>
@@ -9,178 +11,167 @@
 <nav>
 <ul>
   <li><a class="active" href="./index.html">Home</a></li>
-  <li>
-    <a href="./projects.html">Projects</a>
-    <ul class="hidden">
-  			<li><a href="./projects/iap.html">IAP</a></li>
-		</ul>
-  </li>
+  <li><a href="./projects.html">Projects</a></li>
+	<li><a href="./contact.html">Contact</a></li>
 </ul>
 </nav>
 
-<section>
-	<aside>
-
+<div class="container">
+	<div class="sidebar">
 		<h1>Paul Johnston</h1>
 		<hr>
 		<h3>Computer Science</h3>
-    <h3>Brigham Young University</h3>
+		<h3>Data Science Emphasis</h3>
+		<h3>Brigham Young University</h3>
 		<h3>Graduation date : December 2019</h3>
-		<img src="./images/Johnston_Paul_BYU.jpeg" width="300" height="300"/>
-    <br>
-    <h2>Contact</h2>
-    <hr class="smallHeader">
-    <div class="contactList experience">
-    	<p>Email: pjohnst5@byu.edu</p>
-    	<a href="https://www.linkedin.com/in/paul-alonso-johnston/"><p>LinkedIN</p></a>
-    	<a href="https://github.com/pjohnst5"><p>Github</p></a>
-    </div>
-
-    <h3>References</h3>
-    <hr class="smallHeader">
-
-    <div class="experience">
-    	<a href="https://cs.byu.edu/faculty/barker" target="_blank">Dr.Cory Barker</a>
-    	<br>
-      <br>
-    	<a href="https://fhsscomputing.byu.edu/Web" target="_blank">Ken Millard</a>
-    </div>
+		<img src="./images/Plad_small.jpg" width="300" height="300"/>
+	</div>
 
 
-	</aside>
-	<article>
-    <div class="article">
-      <h1>Projects</h1>
-      <hr class="smallHeader">
-      <br>
-      <form action="./projects.html">
-        <input type="submit" class="styledButton" value="See Projects Page" />
-      </form>
+	<div class="main">
+		<h1>Projects</h1>
+		<hr class="smallHeader">
+		<br>
+		<form action="./projects.html">
+		  <input type="submit" class="styledButton" value="See Projects Page" />
+		</form>
 
 
-      <h1>Experience</h1>
-      <hr class="smallHeader">
-      <div class="experience">
-        <h3>Course Assistant Supervisor</h3>
-        <h4>August 2017 - Present</h4>
-        <em><p>Computer Science Department: Brigham Young University</p></em>
+		<h1>Experience</h1>
+		<hr class="smallHeader">
+		<div class="experience">
+			<h3>Computing Student Intern</h3>
+		  <h4>May 2019 - August 2019</h4>
+		  <em><p>Lawrence Livermore National Laboratory</p></em>
+		  <div class="bulletList">
+		    <ul>
+		      <li>Designed and developed a full-stack visual analysis web application using a Django Python backend and JavaScript frontend</li>
+		      <li>Worked closely with customers and full-time developers during two-week sprints involving code reviews, sprint planning, and requirements gathering</li>
+		      <li>Received a full-time offer of employment as well as an award for research presentation given to only 15 of 400+ interns</li>
+					<li><a href="./projects/llnl.html">See demo</a></li>
+		    </ul>
+		  </div>
 
-        <div class="bulletList">
-          <ul>
-            <li>Teaching and assisting 300+ students to understand discrete mathematics and their applications while grading 1000+ labs and assignments each semester</li>
-            <li>Working one-on-one with students during code evaluations 15 hours per week</li>
-            <li>Coordinating with a team of 10 TAs and professor on grading criteria and scheduling</li>
-            <li>Received positive reviews from students based on effectiveness and knowledge of subjects</li>
-            <li>To see reviews click <a href="./images/Johnston_Paul_TA_Review.pdf" target="_blank">here</a></li>
-            <li>Reference: <a href="https://cs.byu.edu/faculty/barker" target="_blank">Cory Barker</a></li>
-          </ul>
-        </div>
+			<h3>Research Assistant</h3>
+		  <h4>October 2018 - May 2019</h4>
+		  <em><p>Stastics Department: Brigham Young University</p></em>
+		  <div class="bulletList">
+		    <ul>
+		      <li>Developed and deployed a free actuarial exam prep website using the Vue.js library</li>
+		      <li>Collaborated one-on-one with system admins to assess and minimize site vulnerability</li>
+		      <li>Coordinated with two other developers using version control software and task managers</li>
+		      <li>Reference: <a href="https://hartman.byu.edu" target="_blank">Brian Hartman</a></li>
+		    </ul>
+		  </div>
 
-
-        <h3>Web Developer</h3>
-        <h4>May 2018 - August 2018</h4>
-        <em><p>Center for Family History and Genealogy: Brigham Young University</p></em>
-        <div class="bulletList">
-          <ul>
-            <li>Developed database driven websites used by professors and teams of student researchers</li>
-            <li>Compiled and presented custom data analyses from ~1 million record databases using SQL</li>
-            <li>Converted a MySQL database with approximately 1 million records into a SQL database using C#. The target database had a completely different schema which required much attention to detail and optimization. I was able to reduce the runtime of the program by 24 hours.</li>
-            <li>Reference: <a href="https://fhsscomputing.byu.edu/Web" target="_blank">Ken Millard</a></li>
-            <li>Sites include:</li>
-            <ul>
-              <a href="http://iap_testing.byu.edu/"><li>iap_testing.byu.edu/</li></a>
-              <a href="http://nauvoo.byu.edu/"><li>nauvoo.byu.edu/</li></a>
-              <a href="http://welshmormon.byu.edu/"><li>welshmormon.byu.edu/</li></a>
-              <a href="http://history.byu.edu/"><li>history.byu.edu/</li></a>
-            </ul>
-          </ul>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="Languages">
-        <h2>Languages</h2>
-        <hr class="smallHeader">
-        <p>I have used and am fluent in the following languages</p>
-        <div class="bulletList" style="text-align:center;">
-          <ul class="list-horizontal" style="margin-left:0%;padding:0;">
-            <li>C</li>
-            <li>C++</li>
-            <li>C#</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>Javascript</li>
-            <li>SQL</li>
-            <li>Android</li>
-            <li>Bash</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-      </div>
-
-      <br>
-
-      <h2>Education</h2>
-      <hr class="smallHeader">
-      <div class="Education">
-        <div class="bulletList">
-          <div class="educationTitle">
-            <div class="left">
-              <strong><p>Bachelor of Science, Computer Science</p></strong>
-            </div>
-            <div class="right">
-              <strong><p>December 2019</p></strong>
-            </div>
-          </div>
-
-        <p>Minor -  Mathematics</p>
-        <p>GPA - 3.92</p>
-        <strong><p>Relevant Courses</p></strong>
-        <div class="left">
-          <ul>
-            <li>Data Stuctures</li>
-            <li>Advanced Programming Concepts</li>
-            <li>Software Design and Testing</li>
-            <li>Web Programming</li>
-            <li>Computer Systems</li>
-            <li>Computational Theory</li>
-            <li>Algorithm Design and Analysis</li>
-          </ul>
-        </div>
-        <div class="right" style="text-align:left">
-          <ul>
-            <li>Concepts of Programming Languages</li>
-            <li>Systems Programming</li>
-            <li>AP Calculus AB and BC</li>
-            <li>Multi-variable Calculus</li>
-            <li>Elementary Linear Algebra</li>
-            <li>Theory of Probability</li>
-            <li>Discrete Structures</li>
-          </ul>
-        </div>
-
-        </div>
-      </div>
+		  <h3>Course Assistant Supervisor</h3>
+		  <h4>August 2017 - May 2019</h4>
+		  <em><p>Computer Science Department: Brigham Young University</p></em>
+		  <div class="bulletList">
+		    <ul>
+		      <li>Teaching and assisting 300+ students to understand discrete mathematics and their applications while grading 1000+ labs and assignments each semester</li>
+		      <li>Working one-on-one with students during code evaluations 15 hours per week</li>
+		      <li>Coordinating with a team of 10 TAs and professor on grading criteria and scheduling</li>
+		      <li>Received positive reviews from students based on effectiveness and knowledge of subjects</li>
+		      <li>To see reviews click <a href="./images/Johnston_Paul_TA_Review.pdf" target="_blank">here</a></li>
+		      <li>Reference: <a href="https://cs.byu.edu/faculty/barker" target="_blank">Cory Barker</a></li>
+		    </ul>
+		  </div>
 
 
-        <br>
+		  <h3>Web Developer</h3>
+		  <h4>May 2018 - August 2018</h4>
+		  <em><p>Center for Family History and Genealogy: Brigham Young University</p></em>
+		  <div class="bulletList">
+		    <ul>
+		      <li>Developed database driven websites used by professors and teams of student researchers</li>
+		      <li>Compiled and presented custom data analyses from ~1 million record databases using SQL</li>
+		      <li>Converted a MySQL database with approximately 1 million records into a SQL database using C#. The target database had a completely different schema which required much attention to detail and optimization. I was able to reduce the runtime of the program by 24 hours.</li>
+		      <li>Reference: <a href="https://fhsscomputing.byu.edu/Web" target="_blank">Ken Millard</a></li>
+		      <li>Sites include:</li>
+		      <ul>
+		        <a href="http://iap_testing.byu.edu/" target="_blank"><li>iap_testing.byu.edu/</li></a>
+		        <a href="http://nauvoo.byu.edu/" target="_blank"><li>nauvoo.byu.edu/</li></a>
+		        <a href="http://welshmormon.byu.edu/" target="_blank"><li>welshmormon.byu.edu/</li></a>
+		        <a href="http://history.byu.edu/" target="_blank"><li>history.byu.edu/</li></a>
+		      </ul>
+		    </ul>
+		  </div>
+		</div>
 
+		<br>
 
-      <div class="AboutMe">
-        <div class="bulletList">
-          <h2 style="text-align:center;">About</h2>
-          <hr class="smallHeader">
-          <p>Born in Salt Lake City, UT, I have grown to love the mountains and being outdoors. In addition to coding, I enjoy being adventurous, meeting new people, and reading historical fiction. I speak Portuguese, Spanish and English. One of my favorite things to do in my spare time is journal online and listen to music. I spent two years as a missionary in Brasilia, Brazil and loved it! I am half-Peruvian and love Peruvian food. </p>
-        </div>
-      </div>
-    </div>
+		<div class="Languages">
+		  <h2>Languages and Technologies</h2>
+		  <hr class="smallHeader">
+			<p><strong>Proficient</strong></p>
+		  <div class="bulletList" style="text-align:center;">
+		    <ul class="list-horizontal" style="margin-left:0%;padding:0;">
+		      <li>Python</li>
+		      <li>Django</li>
+		      <li>Numpy</li>
+		      <li>Javascript</li>
+		      <li>jQuery</li>
+		      <li>Kendo UI</li>
+		      <li>HTML</li>
+		      <li>CSS</li>
+		    </ul>
+		  </div>
 
-	</article>
+			<p><strong>Experienced</strong></p>
+		  <div class="bulletList" style="text-align:center;">
+		    <ul class="list-horizontal" style="margin-left:0%;padding:0;">
+		      <li>C/C++</li>
+		      <li>Java</li>
+		      <li>C#</li>
+		      <li>SQL</li>
+		      <li>BASH</li>
+		      <li>Linux</li>
+		      <li>Android</li>
+		      <li>Atlassian Suite</li>
+					<li>ASP.NET</li>
+					<li>Vue.js</li>
+		    </ul>
+		  </div>
+		</div>
 
-</section>
+		<br>
 
+		<h2>Education</h2>
+		<hr class="smallHeader">
+		<div class="Education">
+		  <div class="bulletList">
+		    <strong><p>Bachelor of Science, Computer Science</p></strong>
+				<strong><p>Emphsasis: Data Science</p></strong>
+		    <strong><p>December 2019</p></strong>
+		    <p>GPA - 3.89</p>
+		    <strong><p>Relevant Courses</p></strong>
+		  </div>
+			<div class="left_right_container">
+				<div class="bulletList left ">
+					<ul>
+						<li>Data Stuctures</li>
+						<li>Algorithm Design and Analysis</li>
+						<li>Software Design and Testing</li>
+						<li>Web Programming</li>
+						<li>Systems Programming</li>
+						<li>Computer Vision</li>
+					</ul>
+				</div>
+				<div class="right" style="text-align:left">
+					<ul>
+						<li>Machine Learning</li>
+						<li>Deep Learning</li>
+						<li>Multi-variable Calculus</li>
+						<li>Linear Algebra</li>
+						<li>Theory of Probability</li>
+						<li>Regression</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 </body>

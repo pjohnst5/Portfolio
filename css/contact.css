@@ -1,0 +1,13 @@
+body {
+  height: 100%;
+  background-size: cover;
+  text-align: center;
+}
+
+.container a:visited {
+  color: blue;
+}
+
+hr {
+  width: 40%;
+}
