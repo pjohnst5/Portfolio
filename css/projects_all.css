@@ -35,3 +35,7 @@
   margin:auto;
   text-align: left;
 }
+
+.projectTable a:visited {
+  color: blue;
+}

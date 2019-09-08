@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <title>Image Classification</title>
+</head>
+<body>
+  <nav>
+  <ul>
+    <li><a href="../projects.html">Back to Projects</a></li>
+  </ul>
+  </nav>
+
+  <h1>Deep Learning Image Classification</h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+      <video width="1000" height="500" controls>
+        <source src="../videos/classification.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Google Colab</li>
+        <li>Pytorch library</li>
+        <li>Stanford Cars Dataset</li>
+        <li>Data augmentation through reflection and cropping</li>
+        <li>Experimenting with different batch sizes, learning rates and momemntum terms</li>
+        <li>Testing with ResNet18, AlexNet and VGG with modifications to the last fully connected layer</li>
+        <li>Highest test accuracy: 77%</li>
+      </ul>
+
+      <br>
+      <h2>About</h2>
+      <p>This project consisted of using deep neural networks available through the PyTorch's library to classify the Stanford Cars Dataset. The networks I tested were ResNet18, AlexNet and VGG. I modified each networks by changing the last fully connected layer to match the number of output classes possible for the cars dataset. I also augmented the training data in two ways: Reflecting each training image on it's y axis and randomly cropping 3/4 of each training image four times. I experimented with different batch sizes, learning rates, momentum terms and number of workers.</p>
+      <p>The highest accuracy was 77% attained through the ResNet18 using the Randomly Cropped Dataset.</p>
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/450/tree/master/proj6_image_classification" target="_blank">Github</a></p>
+      </div>
+    </div>
+  </div>
+</body>

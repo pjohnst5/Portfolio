@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="../images/Plad_small.jpg">
   <link rel="stylesheet" href="../css/all.css">
   <link rel="stylesheet" href="../css/projects_all.css">
   <title>World Series Predictor</title>
@@ -24,7 +25,33 @@
         Your browser does not support the video tag.
         </video>
       </div>
+      <h2><a href="../videos/Group_Report_Final.pdf" target="_blank">Link to Paper</a></h2>
+      <div class="videoAbout">
+        <h2>Highlights</h2>
+        <ul>
+          <li>Machine learning models implemented in Python from scratch</li>
+            <ul>
+              <li>Multi-layered Perceptron with Backpropogation</li>
+              <li>KNN</li>
+            </ul>
+          <li>Use of validation sets</li>
+          <li>Cross-validation testing</li>
+          <li>Data gathering and cleaning</li>
+          <li>Feature selection</li>
+          <li>80% accuracy</li>
+          <li>Paper featured in following semester's good examples</li>
+        </ul>
 
+        <h2>About</h2>
+        <p>As the culmination of a semester long project, three classmates and I acheived ~80% accuracy in predicting the winner of the World Series based on playoff data of two competing teams. We gathered data from MLB.com and discussed which features were best to keep. For example, we were originally planning to include home field advantage and defensive efficiency ratio as features but home field advantage was determined inconsistently throughout the years making it an unreliable feature and defensive efficiency ratio was not recorded until 1999 leaving 6 years of data inconsistent as well. Initially we achieved 60% accuracy which is only 10% above the baseline (two teams, flip a coin, fifty-fifty chance of getting it right).</p>
+        <p>After testing more models we realized the models weren't the reason for low accuracy, the dataset was. Initially we had only one dataset where each instance was the difference between the two competing team's statistics. To better our accuracy, we decided to make a new dataset where each instance had both teams' statistics listed side-by-side. This dataset along the Random Forest model proved to be the most accurate. The last dataset we tried was a ratios dataset where each instance was the ratios of the two competing teams' statistics which achieved mediocre results.</p>
+        <p>The models we used included ones we implemented ourselves using python as well as ones provided by WEKA. We used validation sets when determining when to stop training for models that were relevant such as a Multi-layered Perceptron with Backpropogation. At the end of the semester our professor asked our team if he could use our paper as a good example for the next semester.</p>
+
+        <div class="videoSourceCode">
+      		<h2>Source Code</h2>
+      		<p>Available on <a href="https://github.com/pjohnst5/478/tree/master/toolkit" target="_blank">Github</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </body>
