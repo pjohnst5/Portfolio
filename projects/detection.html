@@ -15,4 +15,37 @@
 
   <h1>Computer Vision Object Detection</h1>
   <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+      <video width="1000" height="500" controls>
+        <source src="../videos/detection.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>SIFT Feature extraction</li>
+        <li>K-means clustering</li>
+        <li>Bag-of-words vector representation</li>
+        <li>Support Vector Machine</li>
+        <li>Sliding window detection</li>
+        <li>Non-Maximal Suppression</li>
+      </ul>
+
+      <h2>About</h2>
+      <p>The goal of this project was to detect birds in images. I worked on it with two other students over the course of a week. The approached we used was as follows: </p>
+      <p>First we extracted SIFT features from images of birds and non-birds alike, and trained a k-means clustering model to produce K, 128-dimensional cluster centers where K was the number of visual words (in our case we chose 256 visual words).</p>
+      <p>Next, for each training image, we extracted SIFT features and converted these SIFT features into a histogram representation. Each bin of the histogram represeted one of the K cluster centers we made with the K-means model, and the frequency of each bin was how many SIFT features from the training image were closest to that cluster.</p>
+      <p>We then labeled the training data accordingly, histogram representation of images of birds having a label of "1" and everything else having a label of "-1". We then trained a Support Vector Machine on this data.</p>
+      <p>Finally, we created an algorithm to do sliding window detection on test images by making bounding boxes move across a test image and using Non-Maximal Suppression to make sure we didn't keep two bounding boxes of the same bird. Basically, when the sliding window came across a part of the image that the SVM predicted was a bird, we printed out that window.</p>
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://" target="_blank">Github</a></p>
+      </div>
+    </div>
+  </div>
 </body>
