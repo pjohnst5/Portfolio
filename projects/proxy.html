@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <title>Paul Johnston</title>
+</head>
+<body>
+  <nav>
+  <ul>
+    <li><a href="../projects.html">Back to Projects</a></li>
+  </ul>
+  </nav>
+
+  <h1>Concurrent Proxy Server</h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+     <video controls>
+        <source src="../videos/proxy.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <div class="videoImageContainer">
+        <img class="videoImage" src="../images/proxy.jpg">
+      </div>
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Multi-threading</li>
+        <li>Producer/Consumer design</li>
+        <li>Semaphores</li>
+        <li>Read/write locks</li>
+        <li>C</li>
+        <li>Signal handling</li>
+        <li>Malloc and Free</li>
+        <li>Sockets</li>
+        <li>Connection queues</li>
+
+      </ul>
+
+      <h2>About</h2>
+      <p>This was a semester long project in which I developed a multi-threaded proxy server complete with signal handling and semaphores to avoid race conditions. It concurrently served multiple HTTP requests while also caching the most recent responses. The cache was managed through the use of semaphores to write-lock it when one thread was reading from it and read-lock it when a thread was writing to it. I used Malloc and Free to allocate and deallocate the memory which the cache used and I also kept track of where to write in the cache with head and tail pointers. In addition, I used queues to track which requests had come most recently and opened sockets to communicate with requested servers.</p>
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/Proxy" target="_blank">Github</a></p>
+      </div>
+    </div>
+  </div>
+</body>

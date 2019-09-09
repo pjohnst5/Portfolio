@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <title>Paul Johnston</title>
+</head>
+<body>
+  <nav>
+  <ul>
+    <li><a href="../projects.html">Back to Projects</a></li>
+  </ul>
+  </nav>
+
+  <h1></h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+     <video controls>
+        <source src="../videos/mandelbrot.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <div class="videoImageContainer">
+        <img class="videoImage" src="../images/mandelbrot-pic.png">
+      </div>
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>OpenMP parallelization of for loops</li>
+        <li>OpenMP Tasks</li>
+        <li>Calloc and Free</li>
+        <li>C</li>
+      </ul>
+
+      <h2>About</h2>
+      <p>In this project, I developed a program in C to calculate the mandelbrot set in parallel using OpenMP. To do this I had to declare private OpenMP variables and keep track of position in the image in order to write the appropriate data to a file which was being accessed by multiple threads.</p>
+      <p>With one thread, the total computing time was ~24 seconds. With eight threads the computing time dropped to about 9 seconds. This shows the importance of parallelizing when appropriate and how it can cut computing time down drastically.</p>
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/Mandelbrot" target="_blank">Github</a></p>
+      </div>
+    </div>
+  </div>
+</body>

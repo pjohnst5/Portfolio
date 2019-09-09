@@ -18,7 +18,7 @@
 
   <div class="projectTable">
     <div class="videoDisplay">
-      <video width="1000" height="500" controls>
+     <video controls>
         <source src="../videos/classification.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
@@ -36,7 +36,6 @@
         <li>Highest test accuracy: 77%</li>
       </ul>
 
-      <br>
       <h2>About</h2>
       <p>This project consisted of using deep neural networks available through the PyTorch's library to classify the Stanford Cars Dataset. The networks I tested were ResNet18, AlexNet and VGG. I modified each networks by changing the last fully connected layer to match the number of output classes possible for the cars dataset. I also augmented the training data in two ways: Reflecting each training image on it's y axis and randomly cropping 3/4 of each training image four times. I experimented with different batch sizes, learning rates, momentum terms and number of workers.</p>
       <p>The highest accuracy was 77% attained through the ResNet18 using the Randomly Cropped Dataset.</p>

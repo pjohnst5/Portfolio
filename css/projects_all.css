@@ -31,11 +31,31 @@
 }
 
 .videoAbout {
-  width: 60%;
+  width: 90%;
   margin:auto;
   text-align: left;
 }
 
+.projectTable {
+	width: 80%;
+	height: 90%;
+	margin: auto;
+}
+
 .projectTable a:visited {
   color: blue;
+}
+
+.videoImage {
+	width: 80%;
+	margin: auto;
+}
+
+video {
+	width: 100%;
+	margin: auto;
+}
+
+.videoImageContainer {
+	text-align: center;
 }

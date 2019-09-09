@@ -19,15 +19,30 @@
 
   <div class="projectTable">
     <div class="videoDisplay">
-      <video width="1000" height="500" controls>
+     <video controls>
         <source src="../videos/convex.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
     <div class="videoAbout">
-      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Divide and Conquer algorithm</li>
+        <li>O(n*log(n)) complexity instead of O(n^3)</li>
+        <li>Animations to demonstrate algorithm</li>
+      </ul>
       <h2>About</h2>
-      <p>This solution to the Convex Hull problem uses a divide and conquer algorithm.</p>
+      <p>The convex hull of a set Q of points is the smallest convex polygon P for which each point in Q is either on the boundary of P or in its interior. In this project, I developed a program to compute the convex hull of given points using a divide and conquer algorithm as follows:</p>
+      <ol>
+        <li>Divide the set of points into two subsets, L and R.</li>
+        <li>Computing the convex hulls of L and R recursively where the base case is two points.</li>
+        <li>Combining the convex hulls of L and R by finding the upper and lower common tangents and making those tangents part of the new combined convex hull.</li>
+      </ol>
+      <p>There were many cases which I had to account for when finding the common tangents, i.e. when the top point of L was lower than the top point of R and vice versa. In addition to this I had to make sure that the search for common tangents stopped at the correct points.</p>
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/ConvexHull" target="_blank">Github</a></p>
+      </div>
     </div>
   </div>
 </body>
