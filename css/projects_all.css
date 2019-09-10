@@ -1,19 +1,22 @@
 .projectContainer {
   border-color: blue;
   border: solid;
-  width: 390px;
-  height: 300px;
+  width: 90%;
+  height: 100%;
+	margin: auto;
   background-color: rgba(216, 245, 255, 0.5);
   padding: 0;
   position: relative;
+	text-align: center;
 }
 .imageContainer {
   height: 80%;
   background-color: white;
 }
 .infoContainer {
-  width: 390px;
+  width: 100%;
   height: 20%;
+	margin: auto;
   position: absolute;
   bottom: 0;
   display: flex;
