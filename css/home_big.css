@@ -1,3 +1,7 @@
+body {
+	font-size: 100%;
+}
+
 /* Big wrapper container */
 .container {
 	display: grid;
