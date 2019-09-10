@@ -29,4 +29,5 @@ nav {
 			 "cell10 cell11";
 	grid-gap: 20px;
 	justify-content: center;
+	grid-template-rows: repeat(6, 300px);
 }

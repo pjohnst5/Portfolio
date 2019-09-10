@@ -20,7 +20,6 @@ nav {
 
 .container {
   display: grid;
-  grid-template-rows: auto auto auto;
   grid-template-areas:
       "cell0 cell1 cell2"
       "cell3 cell4 cell5"
@@ -28,4 +27,5 @@ nav {
       "cell9 cell10 cell11";
   grid-gap: 20px;
   justify-content: center;
+	grid-template-rows: repeat(4, 300px);
 }
