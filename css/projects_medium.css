@@ -2,6 +2,10 @@ body {
 	font-size: 100%;
 }
 
+nav {
+	font-size: 100%;
+}
+
 .projectContainer {
   border-color: blue;
   border: solid;
