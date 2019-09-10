@@ -1,5 +1,22 @@
+body {
+	font-size: 150%;
+}
+
+.projectContainer {
+  border-color: blue;
+  border: solid;
+  width: 90%;
+  height: 100%;
+	margin: auto;
+  background-color: rgba(216, 245, 255, 0.5);
+  padding: 0;
+  position: relative;
+	text-align: center;
+}
+
 .container {
 	display: grid;
 	grid-gap: 20px;
 	justify-content: center;
+	grid-template-rows: repeat(12, minmax(700px, auto));
 }
