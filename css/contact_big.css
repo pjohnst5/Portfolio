@@ -4,6 +4,10 @@ body {
   text-align: center;
 }
 
+nav {
+	font-size: 100%;
+}
+
 .container a:visited {
   color: blue;
 }
