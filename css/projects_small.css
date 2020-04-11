@@ -10,7 +10,7 @@
 	text-align: center;
 }
 
-.container {
+.container-projects {
 	display: grid;
 	grid-gap: 1%;
 	justify-content: center;
