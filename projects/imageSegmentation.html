@@ -22,24 +22,35 @@
   <div class="projectTable">
     <div class="videoDisplay">
      <video controls>
-        <source src="../videos/.mp4" type="video/mp4">
+        <source src="../videos/imageSegmentation.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
     <div class="videoAbout">
       <br>
       <h2>Highlights</h2>
-      <p>LInk to cityscapes. Cross entropy loss. Custom loss function.</p>
       <ul>
-        <li></li>
+        <li>Convolutional encoder/decoder</li>
+        <li><a href="https://arxiv.org/abs/1505.04597" target="_blank">Unet</a> custom implementation</li>
+        <li>Self-driving car <a href="https://www.cityscapes-dataset.com/" target="_blank">data</a></li>
+        <li>Custom loss functions</li>
+        <li>No instruction or prior formatting for project</li>
       </ul>
 
-      <h2>Methods</h2>
-      <p></p>
+      <h2>About</h2>
+      <p>This was a self-driven project where me and a classmate came up with an idea to apply machine learning towards. Self driving cars fascinated us both so we chose to explore the techniques for taking raw images and classifying multiple objects within them. The method we chose to further analyse was image segmentation. After scouring the internet for datasets we decided to try the <a href="https://www.cityscapes-dataset.com/" target="_blank">Cityscapes Dataset</a>. This dataset takes images from the drivers point of view from cars and labels each pixel of the image to a certain output class. For example a pixel that was part of a person would be hold the value 11, a pixel part of a car would hold 26 etc.</p>
+      <p>We tested two models, a convolutional encoder/decoder we designed ourselves and <a href="https://arxiv.org/abs/1505.04597" target="_blank">Unet</a> modified to meet our prediction needs. We ran into many issues at first like the output image being all black or the loss of the models staying constant throughout training. After many iterations we found that adding activation functions such as ReLu into our convolutional encoder/decoder produced images with outlines of objects clearly definied although not the expected colors of the label. Another improvement we made was testing different loss functions, including custom ones. When trying the Unet, at first we saw all black output. Realizing that we needed to adjust the number of output classes Unet was guessing, we saw some more outline learning like that of the convolutional encoder decoder. Finally after trying the cross entropy loss function we were able to see predictions that more closely aligned with the labels.</p>
+      <p>In summary, Unet adjusted to fit the number of output classes combined with cross entropy loss proved to be the most successful combination with results seen below.</p>
+      <h3>Raw image</h3>
+      <img src="../images/Raw.JPG" alt="">
+      <h3>Label</h3>
+      <img src="../images/target.JPG" alt="">
+      <h3>Prediction</h3>
+      <img src="../images/guess.JPG" alt="">
 
       <div class="videoSourceCode">
         <h2>Source Code</h2>
-        <p>Available on <a href="https://" target="_blank">Github</a></p>
+        <p>Available on <a href="https://github.com/pjohnst5/Image-Segmentation/blob/master/README.md" target="_blank">GitHub</a></p>
       </div>
       <br>
     </div>
