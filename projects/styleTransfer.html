@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <link rel="stylesheet" href="../css/big_text.css">
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/individual_project_big.css' />
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/small_text.css' />
+  <title>Paul Johnston</title>
+</head>
+<body>
+  <nav>
+  <ul>
+    <li><a href="../projects.html">Back to Projects</a></li>
+  </ul>
+  </nav>
+
+  <h1></h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+     <video controls>
+        <source src="../videos/styleTransfer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Utilization of a pretrained <a href="https://neurohive.io/en/popular-networks/vgg16/">VGG</a> network</li>
+        <li>Extracting statistics from individual layers of the network</li>
+        <li>Custom loss function</li>
+        <li>Reading academic <a href="https://arxiv.org/pdf/1508.06576.pdf">paper</a> and translating into code.</li>
+      </ul>
+
+      <h2>About</h2>
+      <p>This project involved extracting statistics from layers of a VGG network from two given input images. One image was dubbed the "content" image and the other the "style" image. The goal of this project was to create a new image where the content of the new image mirrored that of the input content image and the style of the new image mirrored that of the input style image like so</p>
+
+      <h3>Content Image</h3>
+      <img src="../images/raw1.JPG" alt="">
+      <h3>Style Image</h3>
+      <img src="../images/style1.JPG" alt="">
+      <h3>Style Transfered Image</h3>
+      <img src="../images/combo1.JPG" alt="">
+
+      <p>Given an <a href="https://arxiv.org/pdf/1508.06576.pdf">academic paper</a> I created a machine learning process to ask the user for two images, one for content the other for style. I then fed these images into a pretrained <a href="https://neurohive.io/en/popular-networks/vgg16/">VGG network</a>, saving certain layer outputs depending if the input image was the style or content image. I then took a fresh content image, fed it through a vgg network which cached all the network layer outputs, and used these saved layer outputs to minimize with the previously saved style and content layer outputs. By minimizing the style and content layer losses, the fresh content image slowly approached a hybrid of these two images, making the style more and more like the style image and the content more and more like the content image. In order to save specified layer outputs from the VGG netwokr I had to create a custom VGG wrapper which received as input a list of layers to track and returned a vgg network which would produce a cache system of the layers specified.
+      </p>
+      <p>By far one of my favorite projects, playing around with the different style/content combinations was very fun. Try it out!</p>
+      <h3>Content Image</h3>
+      <img src="../images/raw2.JPG" alt="">
+      <h3>Style Image</h3>
+      <img src="../images/style2.JPG" alt="">
+      <h3>Style Transfered Image</h3>
+      <img src="../images/combo2.JPG" alt="">
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/StyleTransfer" target="_blank">Github</a></p>
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
