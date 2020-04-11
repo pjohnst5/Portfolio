@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <link rel="stylesheet" href="../css/big_text.css">
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/individual_project_big.css' />
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/small_text.css' />
+  <title>Paul Johnston</title>
+</head>
+<body>
+  <nav>
+  <ul>
+    <li><a href="../projects.html">Back to Projects</a></li>
+  </ul>
+  </nav>
+
+  <h1></h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+     <video controls>
+        <source src="../videos/gan.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Custom pytorch Dataset and Dataloader classes</li>
+        <li>Generator and Discriminator implementation</li>
+        <li>Adapting existing dataset for custom use case</li>
+      </ul>
+
+      <h2>About</h2>
+      <p>This project involved implementing a GAN (Generative Adversarial Network) and taking a dataset from the internet and implementing the GAN to produce copies. Two datasets were tried, <a href="https://www.kaggle.com/jessicali9530/celeba-dataset">CelebFaces dataset</a> and the <a href="https://www.kaggle.com/mikuns/african-fabric">African fabrics</a> dataset from Kaggle. I first created a Generator consiting of convoultional layers interspersed with BatchNorm layers. This Generator would be provided as input random gaussian noise which it would then pass through the layers to create rgb images. The Discriminator is trying to asign high probabilities to images that are real, and low probabilities to images that are fake, i.e. produced by the Generator. I used Binary Cross Entropy loss because we basically have a 0,1 output here, 0 for fake 1 for real. The Discriminator is trying to minimize this loss while the Generator is trying to maximize this loss, hence the term "Adversarial"</p>
+      <p>This involved much squeezing/dimension footwork as well as keeping track of which machine wanted which outcome in terms of matrix outcomes. Below are the outcomes of the GAN on the CelebFaces dataset after 100 epochs.</p>
+      <h3>Outcome after 100 epochs</h3>
+      <img src="../images/gan_output.JPG" alt="">
+
+      <p>Next was trying the African Textile dataset. Same idea just different images. Here are the results from that.</p>
+      <img src="../images/gan_african_output.JPG" alt="">
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/GAN" target="_blank">Github</a></p>
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
