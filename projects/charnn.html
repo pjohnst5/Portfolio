@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <link rel="stylesheet" href="../css/big_text.css">
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/individual_project_big.css' />
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/small_text.css' />
+  <title>Paul Johnston</title>
+</head>
+<body>
+  <nav>
+  <ul>
+    <li><a href="../index.html">Back to Home</a></li>
+  </ul>
+  </nav>
+
+  <h1></h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="videoDisplay">
+     <video controls>
+        <source src="../videos/charnn.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="videoAbout">
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Recurrent Neural Networks</li>
+        <li>Implementation of a GRU cell</li>
+        <li>Text generation</li>
+      </ul>
+
+      <h2>About</h2>
+			<img src="../images/unrolled-charnn.JPG" alt="">
+      <p>This project is a <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Recurrent Neural Network</a> trained to generate text character by character. We encode each character into a 1-of-k encoding. We feed one encoding into the model and use the output as it's own input in the next loop. One amazing result from this strategy of looping is that the model is able to keep a sort of persistent store of information which traditional neural networks cannot. In this project specifically I used a variation of an LSTM (Long Short Term Memory) network which uses a GRU (Gated Recurrent Unit). LSTM networks are a special kind of RNN which can learn long-term depencies via four interacting nueral network layers. These layers consist of gates composed of a sigmoi neural net layer. The LSTM uses these gates to "remember" or "forget" certain information. As the model trains, it learns to keep certain information of the text persistent and to forget other information. Finally, when testing the model, I gave it one character and it would feed that character into the model, take the output, append it to the running output, and use that newly outputed character as input for the next iteration. Through this recurrence and gate structure, this RNN was able to create very authentic looking text character-by-character.</p>
+      <p>Below are some results from training the RNN on the Shakespear text dataset.</p>
+
+      <code>
+ aand than not then the well
+Have thee but with sir, whin the pooth with stang my prey
+To dish dutter
+	
+ Aat of three to a with dose,
+Sir, in thee thy do more is waster whis.
+
+ABAUS:
+Now, in a geed of thee
+
+ hing bodrent to other,
+Thou how kil, shall our senter from the die
+How not the brother cound my from</code>
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/Char-nn" target="_blank">Github</a></p>
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
