@@ -16,7 +16,7 @@
   </ul>
   </nav>
 
-  <h1></h1>
+  <h1>Character Recurrent Neural Network</h1>
   <hr>
 
   <div class="projectTable">
@@ -31,20 +31,22 @@
       <h2>Highlights</h2>
       <ul>
         <li>Recurrent Neural Networks</li>
+				<li>LSTM (Long Short Term Memeory)</li>
+				<li>GRU (Gated Recurrent Unit)</li>
         <li>Implementation of a GRU cell</li>
         <li>Text generation</li>
       </ul>
 
       <h2>About</h2>
 			<img src="../images/unrolled-charnn.JPG" alt="">
-      <p>This project is a <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Recurrent Neural Network</a> trained to generate text character by character. We encode each character into a 1-of-k encoding. We feed one encoding into the model and use the output as it's own input in the next loop. One amazing result from this strategy of looping is that the model is able to keep a sort of persistent store of information which traditional neural networks cannot. In this project specifically I used a variation of an LSTM (Long Short Term Memory) network which uses a GRU (Gated Recurrent Unit). LSTM networks are a special kind of RNN which can learn long-term depencies via four interacting nueral network layers. These layers consist of gates composed of a sigmoi neural net layer. The LSTM uses these gates to "remember" or "forget" certain information. As the model trains, it learns to keep certain information of the text persistent and to forget other information. Finally, when testing the model, I gave it one character and it would feed that character into the model, take the output, append it to the running output, and use that newly outputed character as input for the next iteration. Through this recurrence and gate structure, this RNN was able to create very authentic looking text character-by-character.</p>
+      <p>This project is a <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Recurrent Neural Network</a> trained to generate text character by character. I encoded each character into a 1-of-k encoding. I then fed one encoding into the model and used the output as it's own input in the next loop. One amazing result from this strategy of looping is that the model is able to keep a sort of persistent store of information which traditional neural networks cannot. In this project specifically I used a variation of an LSTM (Long Short Term Memory) network which uses a GRU (Gated Recurrent Unit). The GRU combines the forget and remember stages into one update stage. LSTM networks are a special kind of RNN which can learn long-term depencies via four interacting nueral network layers. These layers consist of gates composed of a sigmoi neural net layer. The LSTM uses these gates to "remember" or "forget" certain information. As the model trains, it learns to keep certain information of the text persistent and to forget other information. Finally, when testing the model, I gave it one character and it would feed that character into the model, take the output, append it to the running output, and use that newly outputed character as input for the next iteration. Through this recurrence and gate structure, this RNN was able to create very authentic looking text character-by-character.</p>
       <p>Below are some results from training the RNN on the Shakespear text dataset.</p>
 
       <code>
  aand than not then the well
 Have thee but with sir, whin the pooth with stang my prey
 To dish dutter
-	
+
  Aat of three to a with dose,
 Sir, in thee thy do more is waster whis.
 
@@ -54,6 +56,7 @@ Now, in a geed of thee
  hing bodrent to other,
 Thou how kil, shall our senter from the die
 How not the brother cound my from</code>
+			<p>Remember, the model is producing this text character by character which is pretty wild that it can even produce anything at all!</p>
 
       <div class="videoSourceCode">
         <h2>Source Code</h2>

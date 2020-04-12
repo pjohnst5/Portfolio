@@ -16,7 +16,7 @@
   </ul>
   </nav>
 
-  <h1></h1>
+  <h1>Image Segmentation: A Deep Learning Approach</h1>
   <hr>
 
   <div class="projectTable">
@@ -38,8 +38,8 @@
       </ul>
 
       <h2>About</h2>
-      <p>This was a self-driven project where me and a classmate came up with an idea to apply machine learning towards. Self driving cars fascinated us both so we chose to explore the techniques for taking raw images and classifying multiple objects within them. The method we chose to further analyse was image segmentation. After scouring the internet for datasets we decided to try the <a href="https://www.cityscapes-dataset.com/" target="_blank">Cityscapes Dataset</a>. This dataset takes images from the drivers point of view from cars and labels each pixel of the image to a certain output class. For example a pixel that was part of a person would be hold the value 11, a pixel part of a car would hold 26 etc.</p>
-      <p>We tested two models, a convolutional encoder/decoder we designed ourselves and <a href="https://arxiv.org/abs/1505.04597" target="_blank">Unet</a> modified to meet our prediction needs. We ran into many issues at first like the output image being all black or the loss of the models staying constant throughout training. After many iterations we found that adding activation functions such as ReLu into our convolutional encoder/decoder produced images with outlines of objects clearly definied although not the expected colors of the label. Another improvement we made was testing different loss functions, including custom ones. When trying the Unet, at first we saw all black output. Realizing that we needed to adjust the number of output classes Unet was guessing, we saw some more outline learning like that of the convolutional encoder decoder. Finally after trying the cross entropy loss function we were able to see predictions that more closely aligned with the labels.</p>
+      <p>This was a self-driven project where a classmate and I came up with an idea to apply machine learning towards. Self driving cars fascinated us both so we chose to explore the techniques for taking raw images and classifying multiple objects within them. The method we chose to further analyse was image segmentation. After scouring the internet for datasets we decided to try the <a href="https://www.cityscapes-dataset.com/" target="_blank">Cityscapes Dataset</a>. This dataset takes images from the drivers point of view from cars and labels each pixel of the image to a certain output class. For example a pixel that is part of a person would be hold the value 11, a pixel part of a car would hold 26 etc.</p>
+      <p>We tested two models, a convolutional encoder/decoder we designed ourselves and <a href="https://arxiv.org/abs/1505.04597" target="_blank">Unet</a> modified to meet our prediction needs. We ran into many issues at first like the output image being all black or the loss of the models staying constant throughout training. After many iterations we found that adding activation functions such as ReLu into our convolutional encoder/decoder produced images with outlines of objects clearly definied although not the expected colors of the label. Another improvement we made was testing different loss functions, including custom ones. When trying the Unet, at first we saw all black output. Realizing that we needed to adjust the number of output classes Unet was predicting, we saw some more outline learning like that of the convolutional encoder decoder. Finally after trying the cross entropy loss function we were able to see predictions that more closely aligned with the labels.</p>
       <p>In summary, Unet adjusted to fit the number of output classes combined with cross entropy loss proved to be the most successful combination with results seen below.</p>
       <h3>Raw image</h3>
       <img src="../images/Raw.JPG" alt="">
