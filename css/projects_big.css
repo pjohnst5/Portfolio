@@ -1,14 +1,14 @@
 .projectContainer {
   border-color: blue;
   border: solid;
-  width: 300px;
+  width: 250px;
   height: 250px;
   margin: auto;
   background-color: rgba(216, 245, 255, 0.5);
   padding: 0;
   position: relative;
   text-align: center;
-	font-size: 80%;
+	font-size: 70%;
 }
 
 .container-projects {
