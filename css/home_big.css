@@ -6,3 +6,8 @@
   grid-template-areas:
       "sidebar main";
 }
+
+#profile-pic {
+  width: 300px;
+  height: 300px;
+}
