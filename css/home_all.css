@@ -11,20 +11,3 @@
     cursor: pointer;
     border-radius: 12px;
 }
-
-/* Courses left and right */
-.left_right_container {
-	width: 70%;
-	margin: auto;
-}
-.left {
-  float: left;
-  width: 50%;
-  margin: auto;
-}
-.right {
-  float: left;
-  width: 50%;
-  margin: auto;
-  text-align: right;
-}
