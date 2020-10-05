@@ -13,6 +13,45 @@ var app = new Vue({
     enableSubmit: false,
     breed: '',
     subBreed: '',
+    vowels: ['A', 'E', 'I', 'O', 'U'],
+    answersAsString: '',
+    answersToBreed: {
+      "AAA": {"url": "/pug", "name": "Pug"},
+      "AAB": {"url": "/chihuahua", "name": "Chihuahua"},
+      "AAC": {"url": "/shihtzu", "name": "Shih Tzu"},
+
+      "ABA": {"url": "/akita", "name": "Akita"},
+      "ABB": {"url": "/hound/basset", "name": "Basset Hound"},
+      "ABC": {"url": "/dachshund", "name": "Dachshund"},
+      
+      "ACA": {"url": "/terrier/yorkshire", "name": "Yorkshire Terrier"},
+      "ACB": {"url": "/shiba", "name": "Shiba"},
+      "ACC": {"url": "/newfoundland", "name": "Newfoundland"},
+
+      "BAA": {"url": "/pomeranian", "name": "Pomeranian"},
+      "BAB": {"url": "/beagle", "name": "Beagle"},
+      "BAC": {"url": "/terrier/russell", "name": "Jack Russell Terrier"},
+
+      "BBA": {"url": "/chow", "name": "Chow Chow"},
+      "BBB": {"url": "/collie/border", "name": "Border Collie"},
+      "BBC": {"url": "/whippet", "name": "Whippet"},
+
+      "BCA": {"url": "/labrador", "name": "Labrador"},
+      "BCB": {"url": "/husky", "name": "Husky"},
+      "BCC": {"url": "/germanshepherd", "name": "German Sherpherd"},
+
+      "CAA": {"url": "/spaniel/cocker", "name": "Cocker Spaniel"},
+      "CAB": {"url": "/corgi/cardigan", "name": "Corgi"},
+      "CAC": {"url": "/bulldog/french", "name": "French Bulldog"},
+
+      "CBA": {"url": "/poodle/standard", "name": "Poodle"},
+      "CBB": {"url": "/dalmatian", "name": "Dalmatian"},
+      "CBC": {"url": "/retriever/golden", "name": "Golden Retriever"},
+
+      "CCA": {"url": "/samoyed", "name": "Samoyed"},
+      "CCB": {"url": "/australian/shepherd", "name": "Australian Shepherd"},
+      "CCC": {"url": "/stbernard", "name": "St. Bernard"},
+    },
 
 	}, //end data
   methods: {
@@ -20,41 +59,19 @@ var app = new Vue({
       this.finishedQuiz = true;
       this.loadingResult = true;
 
-      if (this.answers[0].actualAnswer === 'A') {
-        if (this.answers[1].actualAnswer === 'A') {
-          this.breed = 'Chihuahua';
-        } else if (this.answers[1].actualAnswer ==='B') {
-          this.breed = 'Beagle';
-        } else {
-          this.breed = 'Dingo';
-        }
+      this.answersToString()
+      console.log(this.answersAsString)
 
-      } else if (this.answers[0].actualAnswer === 'B') {
-        if (this.answers[1].actualAnswer === 'A') {
-          this.breed = 'Whippet';
-        } else if (this.answers[1].actualAnswer ==='B') {
-          this.breed = 'Labrador';
-        } else {
-          this.breed = 'Akita';
-        }
+      name = this.answersToBreed[this.answersAsString].name;
+
+      if (this.vowels.includes(name.charAt(0))) {
+        this.message = 'An ' + name + ' is best for you!';
       } else {
-        if (this.answers[1].actualAnswer === 'A') {
-          this.breed = 'Kelpie';
-        } else if (this.answers[1].actualAnswer ==='B') {
-          this.breed = 'Germanshepherd';
-        } else {
-          this.breed = 'Leonberg';
-        }
+        this.message = 'A ' + name + ' is best for you!';
       }
-
-      this.title = this.breed;
-      if (this.breed.charAt(0) === 'A' || this.breed.charAt(0) === 'E' || this.breed.charAt(0) === 'I' || this.breed.charAt(0) === 'O' || this.breed.charAt(0) === 'U'){
-        this.message = 'An ' + this.breed + ' is best for you!';
-      } else {
-        this.message = 'A ' + this.breed + ' is best for you!';
-      }
-
-			const url = 'https://dog.ceo/api/breed/' + this.breed.toLowerCase() + '/images/random';
+      
+      url = this.fullUrl(this.answersToBreed[this.answersAsString].url)
+      console.log(url)
       fetch(url).then(response => {
        return response.json();
       }).then(json => {
@@ -84,6 +101,17 @@ var app = new Vue({
       if (size === 3){
         this.enableSubmit = true;
       }
+    },
+    answersToString: function() {
+      console.log(this.answers)
+      for (var key in this.answers) {
+        if (this.answers.hasOwnProperty(key)) {
+          this.answersAsString += this.answers[key].actualAnswer
+        }
+      }
+    },
+    fullUrl: function(breed) {
+      return 'https://dog.ceo/api/breed' + breed + '/images/random';
     },
     again : function() {
       location.reload();
