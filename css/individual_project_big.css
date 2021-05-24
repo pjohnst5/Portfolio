@@ -1,0 +1,16 @@
+.project-imgae-display {
+  display: flex;
+  justify-content: center;
+}
+
+.project-imgae-display::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.image-column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}

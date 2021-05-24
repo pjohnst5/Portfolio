@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="../images/Plad_small.jpg">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/projects_all.css">
+  <link rel="stylesheet" href="../css/big_text.css">
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/individual_project_big.css' />
+  <link rel='stylesheet' media='screen and (min-width: 1100px)' href='../css/small_text.css' />
+  <title>Paul Johnston</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Back to Home</a></li>
+    </ul>
+  </nav>
+
+  <h1>Raven's Progressive Matrices</h1>
+  <hr>
+
+  <div class="projectTable">
+    <div class="project-imgae-display">
+      <div class="image-column">
+        <h2>Problem</h2>
+        <img src="../images/ASTI_1.png" style="width:100%">
+      </div>
+      <div class="image-column">
+        <h2>Agent process</h2>
+        <img src="../images/ASTI_2.png" style="width:100%">
+      </div>
+    </div>
+    <div class="videoAbout">
+      <br>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Affine Set and Transform Induction model <a href="../pdfs/ASTI.pdf" target="_blank">(paper)</a></li>
+        <li>Dark-pixel/Intersection-pixel ratios <a href="../pdfs/DPRIPR.pdf" target="_blank">(paper)</a> </li>
+        <li>Sliding window technique</li>
+        <li>Open CV</li>
+        <li>Numpy</li>
+        <li>Creative modifications to original models listed above ^</li>
+      </ul>
+
+      <h2>About</h2>
+      <h5><a href="../pdfs/pjohnston30_Final_RPM.pdf" target="_blank">Full paper</a></h5>
+      <p>Raven's Progressive Matrices is a series of cognitive
+        tests where a subject is given an incomplete matrix of images and
+        is asked to determine which available answer image best completes the matrix pattern. The agent here uses a
+        visual AI approach that combines both the
+        Affine and Set Transformation Induction (ASTI) model (Kunda et.
+        al., 2013) as well as Dark Pixel Ratio and Intersection Pixel Ratio
+        (DPR/IPR) model (Joyner et. al., 2015) with some modifications to
+        both models.</p>
+      <p>In a nutshell, the agent uses OpenCV to perform various affine transformations on the given images, performing
+        a similarity function at each transformation. With each transformation the agent performs a sliding window of
+        10x10 pixels to account for any image jitters, making the best match possible. It then explores all the matches
+        and chooses the best one, then performing that transformation on the candidate image to produce a prediction
+        image. This is the ASTI portion of the agent.</p>
+      <p>If the certainty from the ASTI portion of the agent is not within a certain threshold, the agent then proceeds
+        to compare the ratios of the dark-pixels between the given images. Each comparison casts a vote prportional to
+        the dark-pixel ratios and the image with the highest vote is then selected as a candidate image. This candidate
+        image is then compared to all the possible answer images and the image with the highest ratio vote is selected.
+      </p>
+
+      <div class="videoSourceCode">
+        <h2>Source Code</h2>
+        <p>Available on <a href="https://github.com/pjohnst5/Ravens-Progressive-Matrices-AI-Agent"
+            target="_blank">GitHub</a></p>
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
